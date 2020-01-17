@@ -115,10 +115,10 @@ table.whitelist.`<table config id>`.partition.fields | none | Only valid for par
     "name": "milz-servicenow-connector",
     "config": {
         "servicenow.client.base.uri": "https://ibmmhasdev4.service-now.com",
-        "servicenow.client.oauth.clientid": "119a2c28de29b3002379b02d88594ca3",
-        "servicenow.client.oauth.clientsecret": "<snip>",
-        "servicenow.client.oauth.username": "ibm_uni_portal",
-        "servicenow.client.oauth.userpassword": "<snip>",
+        "servicenow.client.oauth.clientid": "clientid",
+        "servicenow.client.oauth.clientsecret": "clientsecret",
+        "servicenow.client.oauth.username": "someusername",
+        "servicenow.client.oauth.userpassword": "someuserpassword",
         "table.whitelist": "case",
         "table.whitelist.case.name": "sn_customerservice_case",
         "table.whitelist.case.timestamp.field.name": "sys_updated_on",
@@ -147,14 +147,4 @@ This connector has a gradle configuration file. You can create a bundled JAR wit
 servicenow-connector-1.0-SNAPSHOT-all.jar
 [millies:~/Documents/ibm-github/cmas-portals/servicenow-connector-repos/servicenow-connector]$
 
-```
-
-This JAR is bundled in the `kafka-connect` image within the `docker-images` repository in `cmas-portals` ibm github organization.
-It is named `ibm-connect-servicenow-1.0.jar`.
-
-```
-[millies:~/Documents/ibm-github/cmas-portals/servicenow-connector-repos/servicenow-connector]$ cd ../../docker-images/      
-[millies:~/Documents/ibm-github/cmas-portals/docker-images]$ ls confluent/kafka-connect/plugins/ibm-kafka-connect/
-ibm-connect-servicenow-1.0.jar	ibm-connect-transforms.jar
-[millies:~/Documents/ibm-github/cmas-portals/docker-images]$
 ```
